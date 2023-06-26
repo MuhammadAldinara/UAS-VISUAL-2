@@ -33,7 +33,7 @@ var
 implementation
 
 uses
-  Unit1, daftar;
+  Unit1, daftar, Menu;
 
 {$R *.dfm}
 
@@ -67,7 +67,7 @@ Application.MessageBox('Pastikan password yang anda masukkan benar','error',MB_O
 else
 begin
 hide;
-form1.Show;
+Form4.Show;
 end;
 end;
 end;
