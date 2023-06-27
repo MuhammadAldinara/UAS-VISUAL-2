@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 991
-  Top = 216
+  Left = 1032
+  Top = 275
   Width = 793
   Height = 675
   Caption = 'Form5'
@@ -107,7 +107,7 @@ object Form5: TForm5
   end
   object Label3: TLabel
     Left = 32
-    Top = 221
+    Top = 245
     Width = 92
     Height = 15
     Caption = 'JENIS KELAMIN'
@@ -120,7 +120,7 @@ object Form5: TForm5
   end
   object Label4: TLabel
     Left = 32
-    Top = 245
+    Top = 221
     Width = 44
     Height = 15
     Caption = 'AGAMA'
@@ -289,28 +289,32 @@ object Form5: TForm5
   end
   object edt2: TEdit
     Left = 224
-    Top = 245
+    Top = 221
     Width = 455
     Height = 21
     TabOrder = 13
   end
-  object edt3: TEdit
-    Left = 224
-    Top = 269
-    Width = 455
-    Height = 21
-    TabOrder = 14
-  end
   object ComboBox1: TComboBox
     Left = 224
-    Top = 222
+    Top = 246
+    Width = 453
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 14
+    Items.Strings = (
+      'LAKI - LAKI'
+      'PEREMPUAN')
+  end
+  object ComboBox2: TComboBox
+    Left = 224
+    Top = 270
     Width = 453
     Height = 21
     ItemHeight = 13
     TabOrder = 15
     Items.Strings = (
-      'LAKI - LAKI'
-      'PEREMPUAN')
+      'HIDUP'
+      'MENINGGAL')
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -319,7 +323,7 @@ object Form5: TForm5
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'database_siswa'
+    Database = 'db_siswa'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 

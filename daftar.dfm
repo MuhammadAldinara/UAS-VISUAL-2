@@ -127,7 +127,7 @@ object Form3: TForm3
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'database_siswa'
+    Database = 'db_siswa'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
@@ -138,7 +138,6 @@ object Form3: TForm3
   end
   object zqry1: TZQuery
     Connection = con1
-    Active = True
     SQL.Strings = (
       'SELECT * FROM tbl_user')
     Params = <>

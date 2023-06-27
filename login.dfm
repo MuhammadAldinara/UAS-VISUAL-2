@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 682
-  Top = 476
+  Left = 675
+  Top = 287
   Width = 535
   Height = 377
   Caption = 'Form2'
@@ -103,7 +103,7 @@ object Form2: TForm2
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'database_siswa'
+    Database = 'db_siswa'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
@@ -114,7 +114,6 @@ object Form2: TForm2
   end
   object zqry1: TZQuery
     Connection = con1
-    Active = True
     SQL.Strings = (
       'SELECT * FROM tbl_user')
     Params = <>
