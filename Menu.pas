@@ -28,6 +28,7 @@ type
     procedure Button5Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure Button7Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,7 +41,7 @@ var
 implementation
 
 uses
-  login, ortu, siswa, waliKelas, poin, kelas, hubungan, semester;
+  login, ortu, siswa, waliKelas, poin, kelas, hubungan, semester, dataUser;
 
 {$R *.dfm}
 
@@ -90,6 +91,12 @@ procedure TForm4.Button7Click(Sender: TObject);
 begin
   hide;
   Form11.Show;
+end;
+
+procedure TForm4.Button8Click(Sender: TObject);
+begin
+  hide;
+Form12.Show;
 end;
 
 end.

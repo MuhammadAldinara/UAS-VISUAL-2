@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 222
-  Top = 578
+  Left = 391
+  Top = 531
   Width = 465
   Height = 285
   Caption = 'MENU'
@@ -95,7 +95,7 @@ object Form4: TForm4
     Top = 128
     Width = 89
     Height = 33
-    Caption = 'KELUAR'
+    Caption = 'DATA USER'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -11
@@ -103,6 +103,7 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
     TabOrder = 7
+    OnClick = Button8Click
   end
   object mm1: TMainMenu
     Left = 24

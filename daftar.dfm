@@ -65,6 +65,19 @@ object Form3: TForm3
     Font.Style = [fsBold]
     ParentFont = False
   end
+  object Label3: TLabel
+    Left = 69
+    Top = 216
+    Width = 50
+    Height = 16
+    Caption = 'STATUS'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object Edit1: TEdit
     Left = 153
     Top = 117
@@ -119,6 +132,17 @@ object Form3: TForm3
     Items.Strings = (
       'user'
       'admin')
+  end
+  object ComboBox2: TComboBox
+    Left = 152
+    Top = 216
+    Width = 273
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 5
+    Items.Strings = (
+      'Aktif'
+      'Tidak')
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
