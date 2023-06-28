@@ -22,6 +22,8 @@ type
     Button8: TButton;
     procedure LogOut1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,7 +36,7 @@ var
 implementation
 
 uses
-  login, ortu;
+  login, ortu, siswa, waliKelas;
 
 {$R *.dfm}
 
@@ -48,6 +50,18 @@ procedure TForm4.Button1Click(Sender: TObject);
 begin
   hide;
 Form5.Show;
+end;
+
+procedure TForm4.Button2Click(Sender: TObject);
+begin
+  hide;
+Form6.Show;
+end;
+
+procedure TForm4.Button3Click(Sender: TObject);
+begin
+  hide;
+Form7.Show;
 end;
 
 end.

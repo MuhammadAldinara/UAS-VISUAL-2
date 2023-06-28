@@ -48,7 +48,7 @@ begin
 
 with zqry1 do begin
 SQL.Clear;
-SQL.Add('select * from tbl_user where username='+QuotedStr(edit1.Text));
+SQL.Add('select * from tabel_user where username='+QuotedStr(edit1.Text));
 open;
 end;
 

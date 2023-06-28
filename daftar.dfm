@@ -1,9 +1,9 @@
 object Form3: TForm3
-  Left = 235
-  Top = 186
+  Left = 479
+  Top = 172
   Width = 537
   Height = 391
-  Caption = 'Form3'
+  Caption = 'DAFTAR'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -127,7 +127,7 @@ object Form3: TForm3
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'db_siswa'
+    Database = 'database_siswa'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
@@ -138,8 +138,9 @@ object Form3: TForm3
   end
   object zqry1: TZQuery
     Connection = con1
+    Active = True
     SQL.Strings = (
-      'SELECT * FROM tbl_user')
+      'SELECT * FROM tabel_user')
     Params = <>
     Left = 416
     Top = 256

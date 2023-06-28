@@ -56,11 +56,11 @@ begin
 end else
 begin
 zqry1.sql.clear;
-zqry1.sql.Add('insert into tbl_user values(null,"'+Edit1.Text+'","'+Edit2.Text+'","'+ComboBox1.Text+'","'+'aktif'+'")');
+zqry1.sql.Add('insert into tabel_user values(null,"'+Edit1.Text+'","'+Edit2.Text+'","'+ComboBox1.Text+'","'+'aktif'+'")');
 zqry1.ExecSQL;
 
 zqry1.SQL.Clear;
-zqry1.SQL.Add('select * from tbl_user');
+zqry1.SQL.Add('select * from tabel_user');
 zqry1.Open;
 
 Form2.zqry1.Active := False;

@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 526
-  Top = 304
+  Left = 405
+  Top = 260
   Width = 796
   Height = 635
   Caption = 'Form1'
@@ -567,7 +567,7 @@ object Form1: TForm1
   object frxdbdtst1: TfrxDBDataset
     UserName = 'frxdbdtst1'
     CloseDataSource = False
-    DataSource = ds1
+    DataSet = zqry1
     Left = 712
     Top = 216
   end

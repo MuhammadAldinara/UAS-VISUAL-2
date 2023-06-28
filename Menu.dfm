@@ -1,9 +1,9 @@
 object Form4: TForm4
-  Left = 330
-  Top = 616
+  Left = 222
+  Top = 578
   Width = 465
   Height = 285
-  Caption = 'Form4'
+  Caption = 'MENU'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -32,7 +32,7 @@ object Form4: TForm4
     Top = 80
     Width = 89
     Height = 33
-    Caption = 'DATA ORTU'
+    Caption = 'ORANG TUA'
     TabOrder = 0
     OnClick = Button1Click
   end
@@ -41,16 +41,18 @@ object Form4: TForm4
     Top = 80
     Width = 89
     Height = 33
-    Caption = 'Button2'
+    Caption = 'SISWA'
     TabOrder = 1
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 232
     Top = 80
     Width = 89
     Height = 33
-    Caption = 'Button2'
+    Caption = 'WALI KELAS'
     TabOrder = 2
+    OnClick = Button3Click
   end
   object Button4: TButton
     Left = 336

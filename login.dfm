@@ -1,9 +1,9 @@
 object Form2: TForm2
-  Left = 675
-  Top = 287
+  Left = 237
+  Top = 177
   Width = 535
   Height = 377
-  Caption = 'Form2'
+  Caption = 'LOGIN'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -103,7 +103,7 @@ object Form2: TForm2
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'db_siswa'
+    Database = 'database_siswa'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
@@ -114,8 +114,9 @@ object Form2: TForm2
   end
   object zqry1: TZQuery
     Connection = con1
+    Active = True
     SQL.Strings = (
-      'SELECT * FROM tbl_user')
+      'SELECT * FROM tabel_user')
     Params = <>
     Left = 256
     Top = 272
