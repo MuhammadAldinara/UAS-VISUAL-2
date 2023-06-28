@@ -44,6 +44,7 @@ type
     cmb2: TComboBox;
     dtp1: TDateTimePicker;
     edt6: TEdit;
+    Button1: TButton;
     procedure b1Click(Sender: TObject);
     procedure posisiawal;
     procedure editbersih;
@@ -54,6 +55,9 @@ type
     procedure dg1CellClick(Column: TColumn);
     procedure b3Click(Sender: TObject);
     procedure b4Click(Sender: TObject);
+    procedure b5Click(Sender: TObject);
+    procedure Bb6Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,6 +69,9 @@ var
   id : string;
 
 implementation
+
+uses
+  Menu;
 
 {$R *.dfm}
 
@@ -236,6 +243,22 @@ begin
 ShowMessage('DATA BATAL DIHAPUS');
 posisiawal;
 end;
+end;
+
+procedure TForm6.b5Click(Sender: TObject);
+begin
+posisiawal;
+end;
+
+procedure TForm6.Bb6Click(Sender: TObject);
+begin
+frxreport1.ShowReport();
+end;
+
+procedure TForm6.Button1Click(Sender: TObject);
+begin
+Hide;
+Form4.Show;
 end;
 
 end.

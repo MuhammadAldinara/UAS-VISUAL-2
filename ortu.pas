@@ -40,6 +40,7 @@ type
     frxreport1: TfrxReport;
     frxdbdtst1: TfrxDBDataset;
     ComboBox2: TComboBox;
+    Button1: TButton;
     procedure b4Click(Sender: TObject);
     procedure posisiawal;
     procedure b1Click(Sender: TObject);
@@ -50,6 +51,8 @@ type
     procedure b5Click(Sender: TObject);
     procedure b3Click(Sender: TObject);
     procedure dg1CellClick(Column: TColumn);
+    procedure Bb6Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -61,6 +64,9 @@ var
   id : string;
 
 implementation
+
+uses
+  Menu;
 
 {$R *.dfm}
 
@@ -223,6 +229,17 @@ edt1.Text:= zqry1.FieldList[6].AsString;
 ComboBox1.Text:= zqry1.FieldList[7].AsString;
 edt2.Text:= zqry1.FieldList[8].AsString;
 ComboBox2.Text:= zqry1.FieldList[9].AsString;
+end;
+
+procedure TForm5.Bb6Click(Sender: TObject);
+begin
+frxreport1.ShowReport();
+end;
+
+procedure TForm5.Button1Click(Sender: TObject);
+begin
+hide;
+Form4.Show;
 end;
 
 end.

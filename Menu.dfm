@@ -59,32 +59,36 @@ object Form4: TForm4
     Top = 80
     Width = 89
     Height = 33
-    Caption = 'Button2'
+    Caption = 'POIN'
     TabOrder = 3
+    OnClick = Button4Click
   end
   object Button5: TButton
     Left = 24
     Top = 128
     Width = 89
     Height = 33
-    Caption = 'Button2'
+    Caption = 'KELAS'
     TabOrder = 4
+    OnClick = Button5Click
   end
   object Button6: TButton
     Left = 128
     Top = 128
     Width = 89
     Height = 33
-    Caption = 'Button2'
+    Caption = 'HUBUNGAN'
     TabOrder = 5
+    OnClick = Button6Click
   end
   object Button7: TButton
     Left = 232
     Top = 128
     Width = 89
     Height = 33
-    Caption = 'Button2'
+    Caption = 'SEMESTER'
     TabOrder = 6
+    OnClick = Button7Click
   end
   object Button8: TButton
     Left = 336

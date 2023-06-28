@@ -39,6 +39,7 @@ type
     edt7: TEdit;
     cmb1: TComboBox;
     edt6: TEdit;
+    Button1: TButton;
     procedure posisiawal;
     procedure editbersih;
     procedure editenable;
@@ -49,6 +50,9 @@ type
     procedure b4Click(Sender: TObject);
     procedure dg1CellClick(Column: TColumn);
     procedure b1Click(Sender: TObject);
+    procedure b5Click(Sender: TObject);
+    procedure Bb6Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,6 +64,9 @@ var
   id : string;
 
 implementation
+
+uses
+  Menu;
 
 {$R *.dfm}
 
@@ -224,8 +231,23 @@ b2.Enabled:= True;
 b3.Enabled:= False;
 b4.Enabled:= False;
 b5.Enabled:= True;
-
 editenable;
+end;
+
+procedure TForm7.b5Click(Sender: TObject);
+begin
+posisiawal;
+end;
+
+procedure TForm7.Bb6Click(Sender: TObject);
+begin
+frxreport1.ShowReport();
+end;
+
+procedure TForm7.Button1Click(Sender: TObject);
+begin
+  hide;
+Form4.Show;
 end;
 
 end.
