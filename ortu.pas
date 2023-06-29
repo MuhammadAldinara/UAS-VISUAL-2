@@ -126,15 +126,15 @@ end;
 
 procedure TForm5.editbersih;
 begin
-Edit1.Clear;
-Edit2.Clear;
-Edit3.Clear;
-Edit4.Clear;
-Edit5.Clear;
-edt1.Clear;
-edt2.Clear;
+Edit1.Text := '';
+Edit2.Text := '';
+Edit3.Text := '';
+Edit4.Text := '';
+Edit5.Text := '';
+edt1.Text := '';
+edt2.Text := '';
 ComboBox1.Text := '';
-ComboBox2.Clear;
+ComboBox2.Text := '';
 end;
 
 procedure TForm5.editenable;

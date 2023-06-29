@@ -1,10 +1,10 @@
 object Form7: TForm7
-  Left = 166
-  Top = 167
+  Left = 925
+  Top = 275
   Width = 683
   Height = 601
   Caption = 'DATA WALI KELAS'
-  Color = clBtnFace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -270,20 +270,13 @@ object Form7: TForm7
     Height = 21
     TabOrder = 11
   end
-  object edt7: TEdit
-    Left = 184
-    Top = 240
-    Width = 385
-    Height = 21
-    TabOrder = 12
-  end
   object cmb1: TComboBox
     Left = 184
     Top = 120
     Width = 385
     Height = 21
     ItemHeight = 13
-    TabOrder = 13
+    TabOrder = 12
     Items.Strings = (
       'L'
       'P')
@@ -293,7 +286,7 @@ object Form7: TForm7
     Top = 216
     Width = 385
     Height = 21
-    TabOrder = 14
+    TabOrder = 13
   end
   object Button1: TButton
     Left = 8
@@ -301,8 +294,19 @@ object Form7: TForm7
     Width = 33
     Height = 25
     Caption = '<'
-    TabOrder = 15
+    TabOrder = 14
     OnClick = Button1Click
+  end
+  object cmb2: TComboBox
+    Left = 184
+    Top = 240
+    Width = 385
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 15
+    Items.Strings = (
+      'Aktif'
+      'Tidak')
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

@@ -43,6 +43,7 @@ type
     procedure b5Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Bb6Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -217,6 +218,11 @@ end;
 procedure TForm12.Bb6Click(Sender: TObject);
 begin
 frxreport1.ShowReport();
+end;
+
+procedure TForm12.FormShow(Sender: TObject);
+begin
+posisiawal;
 end;
 
 end.

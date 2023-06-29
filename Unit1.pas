@@ -10,29 +10,8 @@ uses
 
 type
   TForm1 = class(TForm)
-    l2: TLabel;
-    l3: TLabel;
-    l4: TLabel;
-    l5: TLabel;
-    l6: TLabel;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    Edit5: TEdit;
-    con1: TZConnection;
-    zqry1: TZQuery;
-    dg1: TDBGrid;
-    ds1: TDataSource;
-    b1: TButton;
-    b2: TButton;
-    b3: TButton;
-    b4: TButton;
-    b5: TButton;
     Label1: TLabel;
-    Bb6: TButton;
-    frxreport1: TfrxReport;
-    frxdbdtst1: TfrxDBDataset;
+    Label2: TLabel;
     procedure b4Click(Sender: TObject);
     procedure b1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);

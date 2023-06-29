@@ -36,10 +36,10 @@ type
     edt3: TEdit;
     edt4: TEdit;
     edt5: TEdit;
-    edt7: TEdit;
     cmb1: TComboBox;
     edt6: TEdit;
     Button1: TButton;
+    cmb2: TComboBox;
     procedure posisiawal;
     procedure editbersih;
     procedure editenable;
@@ -81,7 +81,7 @@ edt3.Text := '';
 edt4.Text := '';
 edt5.Text := '';
 edt6.Text := '';
-edt7.Text := '';
+cmb2.Text := '';
 end;
 
 procedure TForm7.editdisable;
@@ -93,7 +93,7 @@ edt3.Enabled:= False;
 edt4.Enabled:= False;
 edt5.Enabled:= False;
 edt6.Enabled:= False;
-edt7.Enabled:= False;
+cmb2.Enabled:= False;
 end;
 
 procedure TForm7.editenable;
@@ -105,7 +105,7 @@ edt3.Enabled:= True;
 edt4.Enabled:= True;
 edt5.Enabled:= True;
 edt6.Enabled:= True;
-edt7.Enabled:= True;
+cmb2.Enabled:= True;
 end;
 
 procedure TForm7.posisiawal;
@@ -130,7 +130,7 @@ procedure TForm7.b2Click(Sender: TObject);
 begin
   //SIMPAN
   
-if(edt1.Text = '')or(edt2.Text = '')or(cmb1.Text = '') or(edt3.Text = '')or(edt4.Text = '')or(edt5.Text = '')or(edt6.Text = '')or(edt7.Text = '')then
+if(edt1.Text = '')or(edt2.Text = '')or(cmb1.Text = '') or(edt3.Text = '')or(edt4.Text = '')or(edt5.Text = '')or(edt6.Text = '')or(cmb2.Text = '')then
 begin
   ShowMessage('DATA TIDAK BOLEH KOSONG !');
 end else
@@ -141,7 +141,7 @@ begin
 end else
 begin
 zqry1.sql.clear;
-zqry1.sql.Add('insert into tabel_wali_kelas values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cmb1.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+edt6.Text+'","'+edt7.Text+'")');
+zqry1.sql.Add('insert into tabel_wali_kelas values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cmb1.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+edt6.Text+'","'+cmb2.Text+'")');
 zqry1.ExecSQL;
 
 zqry1.SQL.Clear;
@@ -154,11 +154,11 @@ end;
 
 procedure TForm7.b3Click(Sender: TObject);
 begin
-if(edt1.Text = '')or(edt2.Text = '')or(cmb1.Text = '')or(edt3.Text = '')or(edt4.Text = '')or(edt5.Text = '')or(edt6.Text = '')or(edt7.Text = '')then
+if(edt1.Text = '')or(edt2.Text = '')or(cmb1.Text = '')or(edt3.Text = '')or(edt4.Text = '')or(edt5.Text = '')or(edt6.Text = '')or(cmb2.Text = '')then
 begin
   ShowMessage('DATA TIDAK BOLEH KOSONG !');
 end else
-if (edt1.Text = zqry1.Fields[1].AsString) and (edt2.Text = zqry1.Fields[2].AsString)and (cmb1.Text = zqry1.Fields[3].AsString)and(edt3.Text = zqry1.Fields[4].AsString)and(edt4.Text = zqry1.Fields[5].AsString)and(edt5.Text = zqry1.Fields[6].AsString)and(edt6.Text = zqry1.Fields[7].AsString)and(edt7.Text = zqry1.Fields[8].AsString) then
+if (edt1.Text = zqry1.Fields[1].AsString) and (edt2.Text = zqry1.Fields[2].AsString)and (cmb1.Text = zqry1.Fields[3].AsString)and(edt3.Text = zqry1.Fields[4].AsString)and(edt4.Text = zqry1.Fields[5].AsString)and(edt5.Text = zqry1.Fields[6].AsString)and(edt6.Text = zqry1.Fields[7].AsString)and(cmb2.Text = zqry1.Fields[8].AsString) then
 begin
 ShowMessage('DATA TIDAK ADA PERUBAHAN');
 posisiawal;
@@ -168,7 +168,7 @@ id:=dg1.DataSource.DataSet.FieldByName('id_wali').AsString;
 
 
 zqry1.SQL.Clear;
-zqry1.SQL.Add('Update tabel_wali_kelas set nik= "'+edt1.Text+'",nama="'+edt2.Text+'", jenis_kelamin= "'+cmb1.Text+'",pendidikan= "'+edt3.Text+'",telp= "'+edt4.Text+'",matpel= "'+edt5.Text+'",alamat= "'+edt6.Text+'",status= "'+edt7.Text+'"  where id_wali ="'+id+'"');
+zqry1.SQL.Add('Update tabel_wali_kelas set nik= "'+edt1.Text+'",nama="'+edt2.Text+'", jenis_kelamin= "'+cmb1.Text+'",pendidikan= "'+edt3.Text+'",telp= "'+edt4.Text+'",matpel= "'+edt5.Text+'",alamat= "'+edt6.Text+'",status= "'+cmb2.Text+'"  where id_wali ="'+id+'"');
 zqry1.ExecSQL;
 ShowMessage('DATA BERHASIL DIUPDATE!'); //UPDATE
 
@@ -220,7 +220,7 @@ edt3.Text:= zqry1.FieldList[4].AsString;
 edt4.Text:= zqry1.FieldList[5].AsString;
 edt5.Text:= zqry1.FieldList[6].AsString;
 edt6.Text:= zqry1.FieldList[7].AsString;
-edt7.Text:= zqry1.FieldList[8].AsString;
+cmb2.Text:= zqry1.FieldList[8].AsString;
 end;
 
 procedure TForm7.b1Click(Sender: TObject);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2023 at 12:02 PM
+-- Generation Time: Jun 29, 2023 at 01:51 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -41,7 +41,8 @@ CREATE TABLE `tabel_hubungan` (
 --
 
 INSERT INTO `tabel_hubungan` (`id_hub`, `id_siswa`, `id_ortu`, `status_hubungan`, `keterangan`, `status_ortu`) VALUES
-(3, 4, 1, 'Wali', 'Paman', 'Hidup');
+(3, 4, 1, 'Tiri', 'Paman', 'Hidup'),
+(4, 6, 4, 'Kandung', 'Ibu', 'Hidup');
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,8 @@ CREATE TABLE `tabel_ortu` (
 
 INSERT INTO `tabel_ortu` (`id_ortu`, `nik`, `nama`, `pendidikan`, `pekerjaan`, `telp`, `alamat`, `jenis_kelamin`, `agama`, `status`) VALUES
 (1, '12345678', 'Alexander Udin', 's2', 'Pensiun', '0895796534681', 'Jl Mars', 'L', 'Islam', 'Hidup'),
-(3, '12323', 'asd', 'asd', 'asd', '2132', 'asda', 'P', 'asd', 'Alm');
+(3, '12323', 'asd', 'asd', 'asd', '2132', 'asda', 'P', 'asd', 'Alm'),
+(4, '12345678', 'Tailor Janah', 's1', 'ceo', '0987654321', 'jl pramuka', 'P', 'islam', 'Hidup');
 
 -- --------------------------------------------------------
 
@@ -137,7 +139,8 @@ CREATE TABLE `tabel_semester` (
 --
 
 INSERT INTO `tabel_semester` (`id_semester`, `id_siswa`, `id_poin`, `id_wali`, `id_ortu`, `id_kelas`, `tanggal`, `semester`, `status`, `tingkat_kelas`) VALUES
-(2, 4, 2, 1, 1, 1, '28 juni 2023', 'Genap', 'Lulus', '12');
+(2, 4, 2, 1, 1, 1, '28 juni 2023', 'Genap', 'Lulus', '12'),
+(3, 6, 2, 5, 4, 1, '29 Juni 2023', 'Genap', 'Lulus', '12');
 
 -- --------------------------------------------------------
 
@@ -165,7 +168,8 @@ CREATE TABLE `tabel_siswa` (
 
 INSERT INTO `tabel_siswa` (`id_siswa`, `nis`, `nisn`, `nama`, `nik`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `alamat`, `telpon`, `status`) VALUES
 (4, '121', '2110010121', 'Aldinara', '2312313', 'Banjarmasin', '25 Februari 2004', 'L', 'Jl Sungai Andai', '0895806767848', 'aktif'),
-(5, '21321', '3213', 'Perdana', '321312', 'Banajr', '23 Feb 2000', 'L', 'Sungai Jingah', '0824234234', 'aktif');
+(5, '21321', '3213', 'Perdana', '321312', 'Banajr', '23 Feb 2000', 'L', 'Sungai Jingah', '0824234234', 'aktif'),
+(6, '0987654321', '1234567890', 'Muhammad', '019283234', 'Banjarmasin', '29 Februari 2000', 'L', 'Jl Kayu Tangi', '08978987654', 'aktif');
 
 -- --------------------------------------------------------
 
@@ -175,10 +179,10 @@ INSERT INTO `tabel_siswa` (`id_siswa`, `nis`, `nisn`, `nama`, `nik`, `tempat_lah
 
 CREATE TABLE `tabel_user` (
   `id_user` int(10) NOT NULL,
-  `username` varchar(10) NOT NULL,
-  `password` varchar(8) NOT NULL,
-  `level` varchar(15) NOT NULL,
-  `status` enum('User','Admin') NOT NULL
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `level` enum('User','Admin') NOT NULL,
+  `status` enum('Aktif','Tidak') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -186,7 +190,8 @@ CREATE TABLE `tabel_user` (
 --
 
 INSERT INTO `tabel_user` (`id_user`, `username`, `password`, `level`, `status`) VALUES
-(1, 'user', 'user', 'User', '');
+(1, 'user', 'user', 'User', 'Aktif'),
+(2, 'aldinara', 'aldinara123', 'User', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -213,7 +218,9 @@ CREATE TABLE `tabel_wali_kelas` (
 INSERT INTO `tabel_wali_kelas` (`id_wali`, `nik`, `nama`, `jenis_kelamin`, `pendidikan`, `telp`, `matpel`, `alamat`, `status`) VALUES
 (1, '01928374', 'supri', 'L', 's1', '089786756', 'agama', 'jl sultan adam', 'aktif'),
 (2, '312313', 'yadu', 'L', 's2', '098765432', 'sejarah indonei', 'jl handil bakti', 'aktif'),
-(4, '3213', 'dasd', 'P', 'asda', '3123', 'wdsa', 'dwdqd', 'aktif');
+(4, '3213', 'dasd', 'P', 'asda', '3123', 'wdsa', 'dwdqd', 'aktif'),
+(5, '1234321', 'iShowSpeed', 'L', 's3', '08536541254', 'TIK', 'Jl Ohio', 'aktif'),
+(6, '213', 'Suripto', 'L', 'SMA', '098765642', 'BK', 'jl A yani', 'Aktif');
 
 --
 -- Indexes for dumped tables
@@ -286,7 +293,7 @@ ALTER TABLE `tabel_wali_kelas`
 -- AUTO_INCREMENT for table `tabel_hubungan`
 --
 ALTER TABLE `tabel_hubungan`
-  MODIFY `id_hub` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_hub` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tabel_kelas`
@@ -298,7 +305,7 @@ ALTER TABLE `tabel_kelas`
 -- AUTO_INCREMENT for table `tabel_ortu`
 --
 ALTER TABLE `tabel_ortu`
-  MODIFY `id_ortu` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_ortu` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tabel_poin`
@@ -310,25 +317,25 @@ ALTER TABLE `tabel_poin`
 -- AUTO_INCREMENT for table `tabel_semester`
 --
 ALTER TABLE `tabel_semester`
-  MODIFY `id_semester` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_semester` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tabel_siswa`
 --
 ALTER TABLE `tabel_siswa`
-  MODIFY `id_siswa` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_siswa` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tabel_user`
 --
 ALTER TABLE `tabel_user`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tabel_wali_kelas`
 --
 ALTER TABLE `tabel_wali_kelas`
-  MODIFY `id_wali` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_wali` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
