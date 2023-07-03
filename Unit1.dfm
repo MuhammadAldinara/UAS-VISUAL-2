@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 346
-  Top = 281
+  Left = 127
+  Top = 465
   Width = 662
   Height = 266
   Caption = 'Data pembuat'
@@ -11,7 +11,6 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
